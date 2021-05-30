@@ -33,6 +33,7 @@ func InitRouter() *gin.Engine {
 	apiv1.Use()
 	{
 		apiv1.GET("/aliyun/getConfig", aliyun.GetConfig)
+		apiv1.Any("/sts/getAccess",aliyun.GetAccess)
 	}
 
 	return r
